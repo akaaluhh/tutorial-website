@@ -25,9 +25,11 @@ header {
 
 main {
   padding-top: 70px;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
 }
 
 h1 {

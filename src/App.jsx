@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from './components/header';
+import LeftMenu from './components/leftmenu';
 import './App.css'
 
 function App()
@@ -22,7 +23,15 @@ function App()
     <>
       <Header />
       <main>
-        <MainLayout data={placeholderData} />
+
+        <div className='leftmenu-layout'>
+          <LeftMenu />
+        </div>
+
+        <div className='main-layout'>
+          <MainLayout data={placeholderData} />
+        </div>
+
       </main>
     </>
   )

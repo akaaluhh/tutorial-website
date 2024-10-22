@@ -34,3 +34,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.leftmenu-layout {
+  flex-shrink: 0;
+  width: 250px;
+  height: 100;
+  padding-top: 30px;
+  background-color: #121c24;
+  overflow-y: scroll;
+}
+
+.main-layout {
+  flex: 1;
+}

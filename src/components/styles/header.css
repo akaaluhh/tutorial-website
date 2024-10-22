@@ -1,5 +1,5 @@
 .topNavBar {
-    height: 60px;
+    height: 55px;
     padding-top: 0;
     display: flex;
     justify-content: space-between;
@@ -12,10 +12,6 @@
 
 .right-items {
     display: flex;
-}
-
-.topSubjectBar {
-    border: 2px solid #646cffaa;
 }
 
 .logo {
@@ -120,4 +116,25 @@
 .spaces-icon {
     width: 20px;
     height: 20px;
+}
+
+/*-------------------------------------------------------  SUBJECT BAR  ----------------------------------------------------------*/
+
+.topSubjectBar {
+    height: 35px;
+    background-color: #262529;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.topSubjectBar li {
+    padding-top: 7px;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 14px;
+}
+
+.topSubjectBar li:hover {
+    background-color: #000000;
 }

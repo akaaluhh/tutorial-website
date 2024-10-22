@@ -54,7 +54,15 @@ function TopNavBar()
 function TopSubjectBar()
 {
     return <div className='topSubjectBar'>
-        SUBJECTBAR
+        <li>
+            <a>HTML</a>
+        </li>
+        <li>
+            <a>CSS</a>
+        </li>
+        <li>
+            <a>JAVASCRIPT</a>
+        </li>
     </div>
 }
 

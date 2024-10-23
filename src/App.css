@@ -36,10 +36,15 @@
 }
 
 .leftmenu-layout {
+  margin-top: 90px;
+  padding-top: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   flex-shrink: 0;
   width: 250px;
   height: 100;
-  padding-top: 30px;
   background-color: #121c24;
   overflow-y: scroll;
 }

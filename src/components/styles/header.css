@@ -128,13 +128,19 @@
     list-style: none;
 }
 
-.topSubjectBar li {
+.topSubjectBar li {}
+
+.topSubjectBar li:hover {
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.topSubjectBar li a {
     padding-top: 7px;
     padding-left: 14px;
     padding-right: 14px;
     font-size: 14px;
-}
-
-.topSubjectBar li:hover {
-    background-color: #000000;
+    display: block;
+    text-decoration: none;
+    color: #ccc;
 }

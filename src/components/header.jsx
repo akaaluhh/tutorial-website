@@ -55,13 +55,13 @@ function TopSubjectBar()
 {
     return <div className='topSubjectBar'>
         <li>
-            <a>HTML</a>
+            <a href='www.google.com'>HTML</a>
         </li>
         <li>
-            <a>CSS</a>
+            <a href='www.google.com'>CSS</a>
         </li>
         <li>
-            <a>JAVASCRIPT</a>
+            <a href='www.google.com'>JAVASCRIPT</a>
         </li>
     </div>
 }

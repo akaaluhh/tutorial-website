@@ -1,12 +1,13 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
 
-const express = require('express');
-const cors = require('cors');
-const cookieParser = require('cookie-parser');
-const mongoose = require('mongoose');
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+import mongoose from 'mongoose';
 
-const { user } = require('./routes/user');
+import { user } from './routes/user.js'
 
+dotenv.config();
 const app = express();
 app.use(cors({
     origin: 'https://localhost:3000/',
@@ -20,7 +21,7 @@ async function main()
 {
     try
     {
-        await mongoose.connect(process.env.MONGO_URL);
+        await mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log("Database connected !");
     } catch (err)
     {

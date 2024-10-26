@@ -45,8 +45,8 @@ function TopNavBar()
                 Get Certified
             </button>
 
-            <button onClick={() => { }} className='button-spaces'>Sign Up</button>
-            <button onClick={() => { }} className='button-spaces'>Log In</button>
+            <button onClick={() => { }} className='button-signup'>Sign Up</button>
+            <button onClick={() => { }} className='button-login'>Log In</button>
         </div>
     </div >
 }

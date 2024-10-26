@@ -6,8 +6,9 @@ const ObjectId = mongoose.ObjectId;
 
 const User = new Schema({
     email: { type: String, unique: true, required: "Your email is required!" },
-    password: { type: String, max: 25, select: false },
-    username: { type: String }
+    password: { type: String, max: 25, select: false, required: true },
+    username: { type: String, required: true },
+    role: { type: String, required: true, enum: ['teacher', 'student'] }
 });
 
 User.pre("save", function (next)

@@ -22,6 +22,15 @@ header {
   width: 100%;
   position: fixed;
   z-index: 10;
+  transition: filter 0.75s ease;
+}
+
+header.active {
+  filter: none;
+}
+
+header.inactive {
+  filter: blur(5px);
 }
 
 main {

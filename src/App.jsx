@@ -24,7 +24,9 @@ function App()
 
   return (
     <div>
-      <Header className={`component ${popupVisible ? 'inactive' : 'active'}`} />
+      <header className={`component ${popupVisible ? 'inactive' : 'active'}`}>
+        <Header />
+      </header>
       <main className={`component ${popupVisible ? 'inactive' : 'active'}`}>
 
         <div className='leftmenu-layout'>

@@ -4,10 +4,10 @@ import { useRecoilState } from 'recoil';
 
 const Header = () =>
 {
-    return <header>
+    return <div>
         <TopNavBar />
         <TopSubjectBar />
-    </header>
+    </div >
 }
 
 

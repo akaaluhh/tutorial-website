@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt'
 
 const Schema = mongoose.Schema;
-const ObjectId = mongoose.ObjectId;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const User = new Schema({
     email: { type: String, unique: true, required: "Your email is required!" },
@@ -31,6 +31,6 @@ User.pre("save", function (next)
     });
 });
 
-const userModel = mongoose.model('user', User);
+const userModel = mongoose.model('User', User);
 
 export { userModel };

@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 
-const Schema = mongoose.Schema();
-const ObjectId = mongoose.ObjectId;
+const Schema = mongoose.Schema;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
-const tutorialModel = new Schema({
-    authorId: { type: ObjectId, required: true, ref: 'User' },
+const tutorialSchema = new Schema({
+    authorId: { type: ObjectId, ref: 'User' },
+    default_course: { type: Boolean, default: true },
     title: { type: String, required: true },
     content: [
         {
@@ -18,19 +19,26 @@ const tutorialModel = new Schema({
     updated_at: { type: Date, default: Date.now }
 });
 
-const topicModel = new Schema({
+const topicSchema = new Schema({
     title: { type: String, required: true },
     subtopics: [
         {
-            _id: { type: ObjectId },
+            _id: { type: ObjectId, required: true },
             name: { type: String, required: true }
         }
-    ]
+    ],
+    course_type: { type: String, enum: ['default', 'teacher'], required: true }
 });
 
-const commentModel = new Schema({
+const commentSchema = new Schema({
     tutorial_id: { type: String, required: true, ref: 'Tutorial' },
     user_id: { type: String, required: true, ref: 'User' },
     comment: { type: String, required: true },
-    created_it: { type: Date, default: Date.now }
+    created_at: { type: Date, default: Date.now }
 });
+
+const tutorialModel = mongoose.model('Tutorial', tutorialSchema);
+const topicModel = mongoose.model('Topic', topicSchema);
+const commentModel = mongoose.model('Comment', commentSchema);
+
+export { tutorialModel, topicModel, commentModel };

@@ -155,8 +155,9 @@
 }
 
 .button-login:hover {
-    background-color: rgb(151, 186, 171);
+    background-color: #00985e;
     cursor: pointer;
+    color: #ffffff;
 }
 
 /*-------------------------------------------------------  SUBJECT BAR  ----------------------------------------------------------*/

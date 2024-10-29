@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import Header from './components/header';
 import LeftMenu from './components/leftmenu';
+import { isPopupVisible, PopupWidget } from './components/popupWidget';
 import './App.css'
 
 function App()
 {
   const [placeholderData, setplaceholderData] = useState([]);
+  const [popupVisible] = useRecoilState(isPopupVisible);
 
   useEffect(() =>
   {
@@ -20,9 +23,9 @@ function App()
   }, []);
 
   return (
-    <>
-      <Header />
-      <main>
+    <div>
+      <Header className={`component ${popupVisible ? 'inactive' : 'active'}`} />
+      <main className={`component ${popupVisible ? 'inactive' : 'active'}`}>
 
         <div className='leftmenu-layout'>
           <LeftMenu />
@@ -33,7 +36,8 @@ function App()
         </div>
 
       </main>
-    </>
+      {popupVisible && <PopupWidget />}
+    </div >
   )
 }
 

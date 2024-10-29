@@ -52,7 +52,7 @@ h1 {
 }
 
 .component {
-  transition: filter 0.75s ease;
+  transition: filter 0.35s ease;
 }
 
 .active {

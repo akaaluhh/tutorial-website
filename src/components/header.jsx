@@ -1,6 +1,6 @@
 import './styles/header.css';
-import { isPopupVisible } from './popupWidget';
-import { useRecoilState } from 'recoil';
+import { isPopupVisible, popupType } from './popupWidget';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 
 const Header = () =>
 {
@@ -10,10 +10,10 @@ const Header = () =>
     </div >
 }
 
-
 function TopNavBar()
 {
     const [popupVisible, setPopupVisible] = useRecoilState(isPopupVisible);
+    const setPopupType = useSetRecoilState(popupType);
 
     return <div className='topNavBar'>
         <div className='left-items'>
@@ -52,8 +52,8 @@ function TopNavBar()
                 Get Certified
             </button>
 
-            <button onClick={() => signupClicked(popupVisible, setPopupVisible)} className='button-signup'>Sign Up</button>
-            <button onClick={() => signinClicked(popupVisible, setPopupVisible)} className='button-login'>Log In</button>
+            <button onClick={() => signupClicked(setPopupVisible, setPopupType)} className='button-signup'>Sign Up</button>
+            <button onClick={() => signinClicked(setPopupVisible, setPopupType)} className='button-login'>Log In</button>
         </div>
     </div >
 }
@@ -73,15 +73,17 @@ function TopSubjectBar()
     </div>
 }
 
-function signupClicked(popupVisible, setPopupVisible)
+function signupClicked(setPopupVisible, setPopupType)
 {
     console.log('signup');
-    setPopupVisible(!popupVisible);
+    setPopupVisible(true);
+    setPopupType('signup');
 }
 
-function signinClicked(popupVisible, setPopupVisible)
+function signinClicked(setPopupVisible, setPopupType)
 {
-    setPopupVisible(!popupVisible);
+    setPopupVisible(true);
+    setPopupType('signin');
 }
 
 export default Header;

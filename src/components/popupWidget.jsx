@@ -1,4 +1,5 @@
-import { atom, selector } from "recoil";
+import { atom, selector, useResetRecoilState } from "recoil";
+import './styles/popups.css'
 
 // Show popup widget and hide background if popup is visible
 export const isPopupVisible = atom({
@@ -9,10 +10,15 @@ export const isPopupVisible = atom({
 // popup widget container
 export function PopupWidget()
 {
-    return
-    (
-        <div>
-
+    const resetPopupVisible = useResetRecoilState(isPopupVisible);
+    return (
+        <div className="popup">
+            <h1>
+                Sign In
+            </h1>
+            <button onClick={() => { resetPopupVisible(); }}>
+                Exit
+            </button>
         </div>
     );
 }

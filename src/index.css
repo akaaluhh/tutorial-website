@@ -27,10 +27,14 @@ header {
 
 header.active {
   filter: none;
+  pointer-events: auto;
+  user-select: auto;
 }
 
 header.inactive {
   filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
 }
 
 main {
@@ -53,10 +57,14 @@ h1 {
 
 .active {
   filter: none;
+  pointer-events: auto;
+  user-select: auto;
 }
 
 .inactive {
   filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
 }
 
 

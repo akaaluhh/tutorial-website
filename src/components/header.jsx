@@ -1,14 +1,15 @@
 import './styles/header.css';
 import { isPopupVisible, popupType } from './popupWidget';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+import React from 'react';
 
-const Header = () =>
+const Header = React.memo(() =>
 {
     return <div>
         <TopNavBar />
         <TopSubjectBar />
     </div >
-}
+})
 
 function TopNavBar()
 {

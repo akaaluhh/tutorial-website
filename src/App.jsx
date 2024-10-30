@@ -43,11 +43,11 @@ function App()
   )
 }
 
-function MainLayout({ data })
+const MainLayout = React.memo(({ data }) =>
 {
   return <React.Fragment>
-    {data && data.map((item) => { return (<p id={item.id}>{item.title}</p>); })}
+    {data && data.map((item) => { return (<p key={item.id}>{item.title}</p>); })}
   </React.Fragment>
-}
+})
 
 export default App

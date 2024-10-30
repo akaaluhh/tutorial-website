@@ -1,7 +1,7 @@
 import { atom, useRecoilState, useResetRecoilState } from "recoil";
-import { signInForm, signUpForm } from "./popups/authforms";
+import { SignInForm, SignUpForm } from "./popups/authforms";
 import './styles/popups.css'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Show popup widget and hide background if popup is visible
 export const isPopupVisible = atom({
@@ -15,7 +15,7 @@ export const popupType = atom({
 })
 
 // popup widget container
-export function PopupWidget()
+const PopupWidget = React.memo(() =>
 {
     const popupVisible = useRecoilState(isPopupVisible);
     const resetPopupVisible = useResetRecoilState(isPopupVisible);
@@ -50,9 +50,9 @@ export function PopupWidget()
         switch (type)
         {
             case 'signin':
-                return signInForm();
+                return (<SignInForm />);
             case 'signup':
-                return signUpForm();
+                return (<SignUpForm />);
             default:
                 return <></>;
         }
@@ -66,4 +66,6 @@ export function PopupWidget()
             </button>
         </div>
     );
-}
+})
+
+export { PopupWidget };

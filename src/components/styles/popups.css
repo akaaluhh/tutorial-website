@@ -10,7 +10,7 @@
     width: 50vh;
     background-color: rgb(84, 166, 139);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 5vh;
     z-index: 1000;
     border-radius: 10%;
     opacity: 0;
@@ -27,7 +27,7 @@
     width: 50vh;
     background-color: rgb(84, 166, 139);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 5vh;
     z-index: 1000;
     border-radius: 10%;
     opacity: 1;
@@ -44,7 +44,7 @@
     width: 50vh;
     background-color: rgb(84, 166, 139);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 5vh;
     z-index: 1000;
     border-radius: 10%;
     opacity: 0;
@@ -54,5 +54,45 @@
 .popup-exit-button {
     height: 5vh;
     width: 8vh;
-    font-size: large;
+    font-size: 2vh
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.sign-in-form h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 1vh;
+    font-size: 5vh;
+}
+
+.sign-in-form p {
+    margin-top: 0vh;
+    padding-left: 1vh;
+    font-size: 2vh;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sign-up-form h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 1vh;
+    font-size: 5vh;
+}
+
+.sign-up-form p {
+    margin-top: 0vh;
+    padding-left: 1vh;
+    font-size: 2vh;
 }
